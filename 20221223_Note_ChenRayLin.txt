@@ -1,0 +1,2 @@
+docker build --platform linux/amd64 --tag seissol/training -f './Dockerfile' .
+docker run -p 53155:53155 seissol/training
