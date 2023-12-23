@@ -1,3 +1,12 @@
 For Mac M1/M2 Chip user, you may want to build the docker image as below and put it to the container.
 docker build --platform linux/amd64 --tag seissol/training -f './Dockerfile' .
 docker run --platform linux/amd64 -p 53155:53155 seissol/training
+docker run --platform linux/amd64 -v $(pwd):/shared/ -u $(id -u):$(id -g) seissol/training "$@"
+
+Error while using pumgen:
+docker run --platform linux/amd64 -v $(pwd):/shared/ -u $(id -u):$(id -g) seissol/training pumgen -s msh2 tpv13_training.msh
+Abort(2664079) on node 0 (rank 0 in comm 0): Fatal error in PMPI_Init: Other MPI error, error stack:
+MPIR_Init_thread(136)........:
+MPID_Init(904)...............:
+MPIDI_OFI_mpi_init_hook(1421):
+MPIDU_bc_table_create(311)...:

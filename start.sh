@@ -1,2 +1,2 @@
 #!/bin/bash
-docker run -p 53155:53155 seissol/seissol-training
+docker run --platform linux/amd64 -p 53155:53155 seissol/training

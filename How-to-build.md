@@ -29,7 +29,7 @@ Although everything should be handled by the github actions, you might want to b
 * dockerhub account with write access to `alicegabriel` or `seissol`
 
 ## How to manually build
-* `docker build --tag seissol/training -f ./Dockerfile`: If any problems occur during the build, adapt `Dockerfile`.
+* `docker build --tag seissol/training -f './Dockerfile' .`: If any problems occur during the build, adapt `Dockerfile`.
 * `docker run -p 53155:53155 seissol/training` (optional, for testing)
 
 
